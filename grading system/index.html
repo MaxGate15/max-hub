@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Max Education Complex</title>
+  <link rel="stylesheet" href="grade.css">
+</head>
+<body>
+  <header class="navbar">
+    <h1>Max  Education Complex</h1>
+  </header>
+
+  <div class="menu">
+    <div class="menu-item" onclick="showSection('admissions')">Admissions</div>
+    <div class="menu-item" onclick="showSection('fees')">Fees</div>
+    <div class="menu-item" onclick="showSection('teachers')">Teachers</div>
+    <div class="menu-item" onclick="showSection('grades')">Grades</div>
+    <div class="menu-item" onclick="showSection('results')">Results</div>
+    <div class="menu-item" onclick="showSection('class-lists')">Class Lists</div>
+  </div>
+
+  <div class="container">
+    <!-- Admissions Section -->
+    <div id="admissions" class="section">
+      <h2>New Admission</h2>
+      <form id="admission-form" onsubmit="addAdmission(event)">
+        <label for="student-name">Student Name:</label>
+        <input type="text" id="student-name" placeholder="Enter student name" required>
+
+        <label for="parent-name">Parent Name:</label>
+        <input type="text" id="parent-name" placeholder="Enter parent name" required>
+
+        <label for="parent-occupation">Parent Occupation:</label>
+        <input type="text" id="parent-occupation" placeholder="Enter parent occupation" required>
+
+        <label for="contact">Contact (Phone/Email):</label>
+        <input type="text" id="contact" placeholder="Enter contact details" required>
+
+        <label for="home-town">Home Town:</label>
+        <input type="text" id="home-town" placeholder="Enter home town" required>
+
+        <label for="religion">Religion:</label>
+        <input type="text" id="religion" placeholder="Enter religion" required>
+
+        <label for="student-class">Class:</label>
+        <input type="text" id="student-class" placeholder="Enter class" required>
+
+        <button type="submit">Add Admission</button>
+      </form>
+      <div id="admissions-list">
+        <h3>Student Admissions</h3>
+        <ul id="students-list"></ul>
+      </div>
+      <button onclick="printSection('admissions')">Print Admissions</button>
+    </div>
+
+    <!-- Fees Section -->
+    <div id="fees" class="section">
+      <h2>Fees</h2>
+      <form id="fees-form" onsubmit="addFees(event)">
+        <label for="fee-student-name">Student Name:</label>
+        <input type="text" id="fee-student-name" placeholder="Enter student name" required>
+
+        <label for="fee-amount">Amount Paid:</label>
+        <input type="number" id="fee-amount" placeholder="Enter fee amount" required>
+
+        <button type="submit">Add Fee</button>
+      </form>
+      <div id="fees-list">
+        <h3>Fee Records</h3>
+        <ul id="fees-record-list"></ul>
+      </div>
+      <button onclick="printSection('fees')">Print Fees</button>
+    </div>
+
+    <!-- Teachers Section -->
+    <div id="teachers" class="section">
+      <h2>Teachers</h2>
+      <form id="teacher-form" onsubmit="addTeacher(event)">
+        <label for="teacher-name">Teacher Name:</label>
+        <input type="text" id="teacher-name" placeholder="Enter teacher name" required>
+
+        <label for="teacher-class">Class:</label>
+        <input type="text" id="teacher-class" placeholder="Enter assigned class" required>
+
+        <button type="submit">Add Teacher</button>
+      </form>
+      <div id="teachers-list">
+        <h3>Teachers</h3>
+        <ul id="teacher-record-list"></ul>
+      </div>
+      <button onclick="printSection('teachers')">Print Teachers</button>
+    </div>
+
+    <!-- Grades Section -->
+    <div id="grades" class="section">
+      <h2>Grade Results</h2>
+      <form id="grades-form" onsubmit="addGrade(event)">
+        <label for="grade-student-name">Student Name:</label>
+        <input type="text" id="grade-student-name" placeholder="Enter student name" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" placeholder="Enter subject" required>
+
+        <label for="score">Score:</label>
+        <input type="number" id="score" placeholder="Enter score" required>
+
+        <button type="submit">Add Grade</button>
+      </form>
+      <div id="grades-list">
+        <h3>Grade Records</h3>
+        <ul id="grades-record-list"></ul>
+      </div>
+      <button onclick="printSection('grades')">Print Grades</button>
+    </div>
+
+    <!-- Class Lists Section -->
+    <div id="class-lists" class="section">
+      <h2>Class Lists</h2>
+      <form id="class-form" onsubmit="addClassList(event)">
+        <label for="class-name">Class Name:</label>
+        <input type="text" id="class-name" placeholder="Enter class name" required>
+
+        <label for="class-student-name">Student Name:</label>
+        <input type="text" id="class-student-name" placeholder="Enter student name" required>
+
+        <button type="submit">Add to Class</button>
+      </form>
+      <div id="class-list">
+        <h3>Class Students</h3>
+        <ul id="class-student-list"></ul>
+      </div>
+      <button onclick="printSection('class-lists')">Print Class List</button>
+    </div>
+
+    <!-- Results Section -->
+    <div id="results" class="section">
+      <h2>Results</h2>
+      <form id="results-form" onsubmit="addResult(event)">
+        <label for="result-student-name">Student Name:</label>
+        <input type="text" id="result-student-name" placeholder="Enter student name" required>
+
+        <label for="result-subject">Subject:</label>
+        <input type="text" id="result-subject" placeholder="Enter subject" required>
+
+        <label for="result-score">Score:</label>
+        <input type="number" id="result-score" placeholder="Enter score" required>
+
+        <button type="submit">Add Result</button>
+      </form>
+      <div id="results-list">
+        <h3>Results Records</h3>
+        <ul id="results-record-list"></ul>
+      </div>
+      <button onclick="printSection('results')">Print Results</button>
+    </div>
+
+  </div>
+
+  <!-- About Section Moved Down -->
+  <div class="about">
+    <h2>About the School</h2>
+    <p>Welcome to our school! We focus on quality education, discipline, and innovation.</p>
+    <ul>
+      <li>Proper uniform is mandatory.</li>
+      <li>Attendance is required for all classes.</li>
+      <li>Respect teachers and students alike.</li>
+    </ul>
+  </div>
+
+  <script src="grade.js"></script>
+</body>
+</html>

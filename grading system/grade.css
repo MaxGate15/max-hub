@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('sch.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333; /* Default text color for readability */
+  }
+  
+  .navbar {
+    background-color: rgba(0, 128, 0, 0.9); /* Slightly transparent green */
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .menu-item {
+    padding: 10px;
+    background-color: rgba(0, 128, 0, 0.1); /* Light green tint */
+    border: 1px solid rgba(0, 128, 0, 0.3);
+    cursor: pointer;
+    text-align: center;
+    width: 15%;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    background-color: rgba(0, 128, 0, 0.3); /* Darker green tint on hover */
+    color: white;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .section {
+    display: none;
+  }
+  
+  h2 {
+    color: #006400; /* Dark green for headers */
+  }
+  
+  form label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  form input:focus, form select:focus {
+    border-color: #4CAF50; /* Highlight field when focused */
+    outline: none;
+  }
+  
+  form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
+  .about {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for contrast */
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    background-color: rgba(0, 128, 0, 0.1);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  button {
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #006400;
+  }
+  
+  
